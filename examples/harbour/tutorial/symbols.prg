@@ -7,7 +7,7 @@
 PROCEDURE Main()
 
    LOCAL nl, ny, i, nxp
-   LOCAL ctit := "Symbols", cstr := Space( 80 )
+   LOCAL ctit := "Symbols", cstr := ""
 
    scrmod( "revers" )
    setpag( "da4p" )
