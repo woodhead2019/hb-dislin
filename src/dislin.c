@@ -14,11 +14,68 @@
 // void  axends (const char *cstr, const char *cax);
 // void  axgit  (void);
 // void  axis3d (float x3, float y3, float z3);
+
 // void  axsbgd (int nclr);
+HB_FUNC( AXSBGD )
+{
+   if( hb_param( 1, HB_IT_INTEGER ) != NULL )
+   {
+      axsbgd( hb_parni( 1 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // void  axsers (void);
+HB_FUNC( AXSERS )
+{
+   axsers();
+}
+
 // void  axslen (int nxl, int nyl);
+HB_FUNC( AXSLEN )
+{
+   if( hb_param( 1, HB_IT_INTEGER ) != NULL &&
+       hb_param( 2, HB_IT_INTEGER ) != NULL )
+   {
+      axslen( hb_parni( 1 ), hb_parni( 2 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // void  axsorg (int nxa, int nya);
+HB_FUNC( AXSORG )
+{
+   if( hb_param( 1, HB_IT_INTEGER ) != NULL &&
+       hb_param( 2, HB_IT_INTEGER ) != NULL )
+   {
+      axsorg( hb_parni( 1 ), hb_parni( 2 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // void  axspos (int nxa, int nya);
+HB_FUNC( AXSPOS )
+{
+   if( hb_param( 1, HB_IT_INTEGER ) != NULL &&
+       hb_param( 2, HB_IT_INTEGER ) != NULL )
+   {
+      axspos( hb_parni( 1 ), hb_parni( 2 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // void  axsscl (const char *cscl, const char *cax);
 // void  axstyp (const char *copt);
 // void  barbor (int iclr);
@@ -68,7 +125,20 @@
 // void  clrcyc (int index, int iclr);
 // void  clrmod (const char *cmode);
 // void  clswin (int id);
+
 // void  color  (const char *col);
+HB_FUNC( COLOR )
+{
+   if( hb_param( 1, HB_IT_STRING ) != NULL )
+   {
+      color( hb_parc( 1 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // void  colran (int nca, int nce);
 // void  colray (const float *zray, int *nray, int n);
 
@@ -244,7 +314,28 @@ HB_FUNC( DISINI )
 // int   gmxalf (const char *copt, char *ca, char *cb);
 // void  gothic (void);
 // void  grace  (int ngrace);
+
 // void  graf   (float xa, float xe, float xorg, float xstp, float ya, float ye, float yorg, float ystp);
+HB_FUNC( GRAF )
+{
+   if( hb_param( 1, HB_IT_NUMERIC ) != NULL &&
+       hb_param( 2, HB_IT_NUMERIC ) != NULL &&
+       hb_param( 3, HB_IT_NUMERIC ) != NULL &&
+       hb_param( 4, HB_IT_NUMERIC ) != NULL &&
+       hb_param( 5, HB_IT_NUMERIC ) != NULL &&
+       hb_param( 6, HB_IT_NUMERIC ) != NULL &&
+       hb_param( 7, HB_IT_NUMERIC ) != NULL &&
+       hb_param( 8, HB_IT_NUMERIC ) != NULL )
+   {
+      graf( ( float ) hb_parnd( 1 ), ( float ) hb_parnd( 2 ), ( float ) hb_parnd( 3 ), ( float ) hb_parnd( 4 ),
+      ( float ) hb_parnd( 5 ),( float ) hb_parnd( 6 ), ( float ) hb_parnd( 7 ), ( float ) hb_parnd( 8 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // void  graf3  (float xa, float xe, float xorg, float xstp, float ya, float ye, float yorg, float ystp, float za, float ze, float zorg, float zstp);
 // void  graf3d (float xa, float xe, float xorg, float xstp, float ya, float ye, float yorg, float ystp, float za, float ze, float zorg, float zstp);
 // void  grafmp (float xa, float xe, float xorg, float xstp, float ya, float ye, float yorg, float ystp);
@@ -254,7 +345,21 @@ HB_FUNC( DISINI )
 // void  grffin (void);
 // void  grfimg (const char *cfil);
 // void  grfini (float x1, float y1, float z1, float x2, float y2, float z2, float x3, float y3, float z3);
+
 // void  grid   (int ixgrid, int iygrid);
+HB_FUNC( GRID )
+{
+   if( hb_param( 1, HB_IT_INTEGER ) != NULL &&
+       hb_param( 2, HB_IT_INTEGER ) != NULL )
+   {
+      grid( hb_parni( 1 ), hb_parni( 2 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // void  grid3d (int ixgrid, int iygrid, const char *copt);
 // void  gridim (float zim, float zre1, float zre2, int n);
 // void  gridmp (int ixgrid, int iygrid);
@@ -339,7 +444,7 @@ HB_FUNC( INTCHA )
    if( hb_param( 1, HB_IT_INTEGER ) != NULL &&
        hb_param( 2, HB_IT_STRING ) != NULL )
    {
-      hb_retni( intcha( hb_parni( 1 ), hb_parc( 2 ) ) );
+      hb_retni( intcha( hb_parni( 1 ), ( char *) hb_parc( 2 ) ) );
    }
    else
    {
@@ -348,7 +453,22 @@ HB_FUNC( INTCHA )
 }
 
 // int   intlen (int nx);
+
 // int   intrgb (float xr, float xg, float xb);
+HB_FUNC( INTRGB )
+{
+   if( hb_param( 1, HB_IT_NUMERIC ) != NULL &&
+       hb_param( 2, HB_IT_NUMERIC ) != NULL &&
+       hb_param( 3, HB_IT_NUMERIC ) != NULL )
+   {
+      hb_retni( intrgb( ( float ) hb_parnd( 1 ), ( float ) hb_parnd( 2 ), ( float ) hb_parnd( 3 ) ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // int   intutf (const int *iray, int n, char *cstr, int nmax);
 // void  isopts (const float *xray, int nx, const float *yray, int ny, const float *zray, int nz, const float *wmat, float wlev, float *xtri, float *ytri, float *ztri, int nmax, int *ntri);
 // void  itmcat (char *clis, const char *cstr);
@@ -356,9 +476,49 @@ HB_FUNC( INTCHA )
 // void  itmncat (char *clis,int nmax,  const char *cstr);
 // char *itmstr (const char *clis, int nlis);
 // void  jusbar (const char *copt);
+
 // void  labclr (int iclr, const char *copt);
+HB_FUNC( LABCLR )
+{
+   if( hb_param( 1, HB_IT_INTEGER ) != NULL &&
+       hb_param( 2, HB_IT_STRING ) != NULL )
+   {
+      labclr( hb_parni( 1 ), hb_parc( 2 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // void  labdig (int ndig, const char *cax);
+HB_FUNC( LABDIG )
+{
+   if( hb_param( 1, HB_IT_INTEGER ) != NULL &&
+       hb_param( 2, HB_IT_STRING ) != NULL )
+   {
+      labdig( hb_parni( 1 ), hb_parc( 2 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // void  labdis (int ndis, const char *cax);
+HB_FUNC( LABDIS )
+{
+   if( hb_param( 1, HB_IT_INTEGER ) != NULL &&
+       hb_param( 2, HB_IT_STRING ) != NULL )
+   {
+      labdis( hb_parni( 1 ), hb_parc( 2 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // void  labels (const char *clab, const char *cax);
 // void  labjus (const char *copt, const char *cax);
 // void  labl3d (const char *copt);
@@ -460,7 +620,21 @@ HB_FUNC( METAFL )
 // void  mysymb (const float *xray, const float *yray, int n, int isym, int iflag);
 // void  myvlt  (const float *xr, const float *xg, const float *xb, int n);
 // void  namdis (int ndis, const char *cax);
+
 // void  name   (const char *cstr, const char *cax);
+HB_FUNC( NAME )
+{
+   if( hb_param( 1, HB_IT_STRING ) != NULL &&
+       hb_param( 2, HB_IT_STRING ) != NULL )
+   {
+      name( hb_parc( 1 ), hb_parc( 2 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // void  namjus (const char *copt, const char *cax);
 // void  nancrv (const char *copt);
 // void  neglog (float eps);
@@ -653,7 +827,22 @@ HB_FUNC( SETPAG )
 
 // void  setres (int npb, int nph);
 // void  setres3d (float xl, float yl, float zl);
+
 // void  setrgb (float xr, float xg, float xb);
+HB_FUNC( SETRGB )
+{
+   if( hb_param( 1, HB_IT_NUMERIC ) != NULL &&
+       hb_param( 2, HB_IT_NUMERIC ) != NULL &&
+       hb_param( 3, HB_IT_NUMERIC ) != NULL )
+   {
+      setrgb( ( float ) hb_parnd( 1 ), ( float ) hb_parnd( 2 ), ( float ) hb_parnd( 3 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // void  setscl (const float *xray, int n, const char *cax);
 // void  setvlt (const char *cvlt);
 // void  setxid (int id, const char *copt);
@@ -798,7 +987,21 @@ HB_FUNC( TEXMOD )
 // void  thkcrv (int nthk);
 // void  thrfin (void);
 // void  thrini (int n);
+
 // void  ticks  (int itick, const char *cax);
+HB_FUNC( TICKS )
+{
+   if( hb_param( 1, HB_IT_INTEGER ) != NULL &&
+       hb_param( 2, HB_IT_STRING ) != NULL )
+   {
+      ticks( hb_parni( 1 ), hb_parc( 2 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // void  ticlen (int nmaj, int nmin);
 // void  ticmod (const char *copt, const char *cax);
 // void  ticpos (const char *cpos, const char *cax);
@@ -807,8 +1010,27 @@ HB_FUNC( TEXMOD )
 // void  tifwin (int nx, int ny, int nw, int nh);
 // void  timopt (void);
 // void  titjus (const char *copt);
+
 // void  title  (void);
+HB_FUNC( TITLE )
+{
+   title();
+}
+
 // void  titlin (const char *cstr, int n);
+HB_FUNC( TITLIN )
+{
+   if( hb_param( 1, HB_IT_STRING ) != NULL &&
+       hb_param( 2, HB_IT_INTEGER ) != NULL )
+   {
+      titlin( hb_parc( 1 ), hb_parni( 2 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // void  titpos (const char *copt);
 // void  torus3d (float xm, float ym, float zm, float r1, float r2, float h, float a1, float a2, int n, int m);
 // void  tprfin (void);
