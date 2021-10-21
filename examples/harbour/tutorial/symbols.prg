@@ -34,7 +34,6 @@ PROCEDURE Main()
          nxp += 350
       ENDIF
 
-      intcha( i, cstr )
       nl := Int( nlmess( cstr ) / 2 )
       messag( cstr, nxp - nl, ny + 150 )
       symbol( i, nxp, ny )
