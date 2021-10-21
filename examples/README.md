@@ -7,6 +7,8 @@
    - [hb32](https://github.com/harbour/core)
    - [hb34](https://github.com/vszakats/harbour-core)
 
+- [DISLIN HTML Manual](https://www.dislin.de/online-manual.html)
+
 # Installing on Windows
 
 Downloading DISLIN Distributions for Windows 64-bit.
@@ -45,7 +47,6 @@ set PATH=c:\DISLIN\bin;%path%
 
 - [Downloading hb-dislin](https://github.com/rjopek/hb-dislin/archive/refs/heads/master.zip)
 
-```
 cd hb-dislin
 hb-dislin>hbmk2 hbdislin.hbp
 ---
