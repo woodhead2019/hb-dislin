@@ -9,7 +9,7 @@ PROCEDURE Main()
    LOCAL pi := 3.1415926, nStep
 
    winsiz( 600, 600 )
-   page(3000, 3000)
+   page( 3000, 3000 )
    metafl( "png" )
    imgfmt( "rgb" )
    scrmod( "revers" )
@@ -40,7 +40,7 @@ PROCEDURE Main()
    setfce( "bottom" )
    matop3( 0.0, 1.0, 0.0, "diffuse" )
 
-   shdmod("smooth", "surface")
+   shdmod( "smooth", "surface" )
    nStep := pi / 30.0
    surfcp( zfun(), 0.0, pi, nStep, 0.0, 2 * pi - 0.5, nStep )
    disfin()
