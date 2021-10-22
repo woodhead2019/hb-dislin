@@ -50,8 +50,10 @@ set PATH=c:\DISLIN\bin;%path%
 
 - [Downloading hb-dislin](https://github.com/rjopek/hb-dislin/archive/refs/heads/master.zip)
 
+```
 cd hb-dislin
 hb-dislin>hbmk2 hbdislin.hbp
+```
 ---
 
 [Edit me](https://github.com/rjopek/hb-dislin/edit/main/examples/README.md)
