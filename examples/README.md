@@ -7,7 +7,10 @@
    - [hb32](https://github.com/harbour/core)
    - [hb34](https://github.com/vszakats/harbour-core)
 
-- [DISLIN HTML Manual](https://www.dislin.de/online-manual.html)
+# DISLIN HTML Manual
+
+- [Contents](https://www.dislin.de/manual/contents.html)
+- [Index](https://www.dislin.de/manual/appd.html)
 
 # Installing on Windows
 
