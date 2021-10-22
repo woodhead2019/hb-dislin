@@ -1,3 +1,4 @@
+@@ -1,58 +0,0 @@
 /*
  *  Demonstration of CURVE
  */
@@ -18,7 +19,7 @@ PROCEDURE Main()
       y1ray[ i ] := sin( x )
       y2ray[ i ] := cos( x )
    NEXT
-Alert( hb_ValToExp( xray ))
+
    metafl( "cons" )
    scrmod( "revers" )
    disini()
@@ -55,4 +56,3 @@ Alert( hb_ValToExp( xray ))
    disfin()
 
    RETURN
-
