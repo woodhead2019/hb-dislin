@@ -43,9 +43,21 @@ Downloading DISLIN Distributions (Mac OSX)
 
 Environment Variables
 
+##### Windows
+
 ```
 set HB_WITH_DISLIN=c:\DISLIN\include
 set PATH=c:\DISLIN\bin;%path%
+```
+
+##### Linux
+
+```
+echo '' >> ~/.bashrc
+echo '# Install hb-dislin to ~/' >> ~/.bashrc
+echo 'export HB_WITH_DISLIN="$HOME/dislin/include"' >> ~/.bashrc
+echo 'export PATH=$HOME/dislin/lib:$PATH' >> ~/.bashrc
+source ~/.bashrc
 ```
 
 - [Downloading hb-dislin](https://github.com/rjopek/hb-dislin/archive/refs/heads/master.zip)
