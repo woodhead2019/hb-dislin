@@ -9,6 +9,7 @@
 
 -depkeyhead=dislin:dislin.h
 -depcontrol=dislin:${HB_WITH_DISLIN}
+-depimplibs=dislin:../bin/dislnc.dll
 -depimplibs=dislin:../lib/dislin-11.4.so
 -depimplibs=dislin:../lib/dislin-11.4.a
 -depimplibd=dislin:dislin
