@@ -1620,18 +1620,105 @@ HB_FUNC( WGSCL )
 // int   wgtbl (int ip, int nrows, int ncols);
 // int   wgtxt  (int ip, const char *cstr);
 // void  widbar (int nzb);
+
 // void  wimage (const char *cfil);
+HB_FUNC( WIMAGE )
+{
+   if( hb_param( 1, HB_IT_STRING ) != NULL )
+   {
+      wimage( hb_parc( 1 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // void  winapp (const char *copt);
+HB_FUNC( WINAPP )
+{
+   if( hb_param( 1, HB_IT_STRING ) != NULL )
+   {
+      winapp( hb_parc( 1 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // void  wincbk (void (*callbck) (int id, int nx, int ny, int nw, int nh), const char *copt);
 // void  windbr (float xk, int nx, int ny, int nwidth, float a);
 // void  window (int nx, int ny, int nw, int nh);
 // void  winfin (int iopt);
+
 // void  winfnt (const char *cfont);
+HB_FUNC( WINFNT )
+{
+   if( hb_param( 1, HB_IT_STRING ) != NULL )
+   {
+      winfnt( hb_parc( 1 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // void  winico (const char *cstr);
+HB_FUNC( WINICO )
+{
+   if( hb_param( 1, HB_IT_STRING ) != NULL )
+   {
+      winico( hb_parc( 1 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // int   winid  (void);
+
 // void  winjus (const char *copt);
+HB_FUNC( WINJUS )
+{
+   if( hb_param( 1, HB_IT_STRING ) != NULL )
+   {
+      winjus( hb_parc( 1 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // void  winkey (const char *copt);
+HB_FUNC( WINKEY )
+{
+   if( hb_param( 1, HB_IT_STRING ) != NULL )
+   {
+      winkey( hb_parc( 1 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // void  winmod (const char *copt);
+HB_FUNC( WINMOD )
+{
+   if( hb_param( 1, HB_IT_STRING ) != NULL )
+   {
+      winmod( hb_parc( 1 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // void  winopt (int iopt, const char *copt);
 
 // void  winsiz (int nw, int nh);
@@ -1649,16 +1736,90 @@ HB_FUNC( WINSIZ )
 }
 
 // void  wintit (const char *cstr);
+HB_FUNC( WINTIT )
+{
+   if( hb_param( 1, HB_IT_STRING ) != NULL )
+   {
+      wintit( hb_parc( 1 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // void  wintyp (const char *copt);
+HB_FUNC( WINTYP )
+{
+   if( hb_param( 1, HB_IT_STRING ) != NULL )
+   {
+      wintyp( hb_parc( 1 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // void  wmfmod (const char *cmod, const char *ckey);
+HB_FUNC( WMFMOD )
+{
+   if( hb_param( 1, HB_IT_STRING ) != NULL &&
+       hb_param( 2, HB_IT_STRING ) != NULL )
+   {
+      wmfmod( hb_parc( 1 ), hb_parc( 2 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // void  world  (void);
 // void  wpixel (int ix, int iy, int iclr);
 // void  wpixls (const unsigned char *iray, int ix, int iy, int nw, int nh);
 // void  wpxrow (const unsigned char *iray, int ix, int iy, int n);
 // int   writfl (int nu, const unsigned char *cbuf, int nbyte);
+
 // void  wtiff  (const char *cfil);
+HB_FUNC( WTIFF )
+{
+   if( hb_param( 1, HB_IT_STRING ) != NULL )
+   {
+      wtiff( hb_parc( 1 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // void  x11fnt (const char *cfont, const char *copt);
+HB_FUNC( X11FNT )
+{
+   if( hb_param( 1, HB_IT_STRING ) != NULL )
+   {
+      x11fnt( hb_parc( 1 ), hb_parc( 2 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // void  x11mod (const char *copt);
+HB_FUNC( X11MOD )
+{
+   if( hb_param( 1, HB_IT_STRING ) != NULL )
+   {
+      x11mod( hb_parc( 1 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // float x2dpos (float x, float y);
 // float x3dabs (float x, float y, float z);
 // float x3dpos (float x, float y, float z);
@@ -1691,7 +1852,20 @@ HB_FUNC( WINSIZ )
 // void  zbffin (void);
 // int   zbfini (void);
 // void  zbflin (float x1, float y1, float z1, float x2, float y2, float z2);
+
 // void  zbfmod (const char *copt);
+HB_FUNC( ZBFMOD )
+{
+   if( hb_param( 1, HB_IT_STRING ) != NULL )
+   {
+      zbfmod( hb_parc( 1 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // void  zbfres (void);
 // void  zbfscl (float x);
 // void  zbftri (const float *x, const float *y, const float *z, const int *ic);
