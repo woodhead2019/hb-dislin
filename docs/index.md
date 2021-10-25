@@ -3,9 +3,11 @@ layout: default
 title: "hb-dislin"
 ---
 
-# **Harbour project extended xBase compiler**
+## **Harbour project extended xBase compiler**
 
 [![Logo](assets/img/harbour_dislin.svg)](https://github.com/rjopek/hb-dislin) ![Logo](assets/img/inbox-zero.svg)
+
+---
 
 ## Harbour .AND. DISLIN
 
