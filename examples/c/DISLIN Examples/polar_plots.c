@@ -16,7 +16,7 @@ int main()
    {
       a = i * step * f;
       yray[ i ] = ( float ) a;
-      xray[ i ] = ( float ) sin ( 5 * a );
+      xray[ i ] = ( float ) sin( 5 * a );
    }
 
    for( i = 0; i < m; i++ )
