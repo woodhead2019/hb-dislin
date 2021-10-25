@@ -5,9 +5,9 @@ title: "hb-dislin"
 
 # **Harbour project extended xBase compiler**
 
-![Logo](assets/img/harbour_dislin.svg)
+[![Logo](assets/img/harbour_dislin.svg)](https://github.com/rjopek/hb-dislin) ![Logo](assets/img/inbox-zero.svg.svg)
 
-# hb-dislin
+## Harbour .AND. DISLIN
 
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](LICENSE)
 
