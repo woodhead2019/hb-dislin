@@ -197,7 +197,30 @@ HB_FUNC( COMPLX )
 // void  csruni (const char *copt);
 // void  curv3d (const float *xray, const float *yray, const float *zray, int n);
 // void  curv4d (const float *xray, const float *yray, const float *zray, const float *wray, int n);
+
 // void  curve  (const float *xray, const float *yray, int n);
+HB_FUNC( CURVE )
+{
+   PHB_ITEM pItem1, pItem2;
+
+   if( ( pItem1 = hb_param( 1, HB_IT_ARRAY ) ) != NULL &&
+       ( pItem2 = hb_param( 2, HB_IT_ARRAY ) ) != NULL &&
+                  hb_param( 3, HB_IT_INTEGER ) != NULL )
+   {
+      float xray;
+      float yray;
+
+      xray = ( float ) hb_arrayGetND( pItem1, 1 );
+      yray = ( float ) hb_arrayGetND( pItem2, 1 );
+
+      curve( &xray, &yray, hb_parni( 3 ) );
+   }
+   else
+   {
+      hb_errRT_BASE( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // void  curve3 (const float *xray, const float *yray, const float *zray, int n);
 // void  curvmp (const float *xray, const float *yray, int n);
 // void  curvx3 (const float *xray, float y, const float *zray, int n);
