@@ -945,14 +945,52 @@ HB_FUNC( PAGORG )
 // void  pielab (const char *clab, const char *cpos);
 // void  pieopt (float xf, float a);
 // void  pierot (float angle);
+
 // void  pietyp (const char *ctyp);
+HB_FUNC( PIETYP )
+{
+   if( hb_param( 1, HB_IT_STRING ) != NULL )
+   {
+      pietyp( hb_parc( 1 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // void  pieval (float x, const char *copt);
 // void  pievec (int ivec, const char *copt);
 // void  pike3d (float x1, float y1, float z1, float x2, float y2, float z2, float r, int nsk1, int nsk2);
 // void  plat3d (float xm, float ym, float zm, float xl, const char *copt);
 // void  plyfin (const char *cfl, const char *cobj);
+
 // void  plyini (const char *copt);
+HB_FUNC( PLYINI )
+{
+   if( hb_param( 1, HB_IT_STRING ) != NULL )
+   {
+      plyini( hb_parc( 1 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // void  pngmod (const char *cmod, const char *ckey);
+HB_FUNC( PNGMOD )
+{
+   if( hb_param( 1, HB_IT_STRING ) != NULL &&
+       hb_param( 2, HB_IT_STRING ) != NULL )
+   {
+      pngmod( hb_parc( 1 ), hb_parc( 2 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
 
 // void  point  (int nx, int ny, int nb, int nh, int ncol);
 HB_FUNC( POINT )
@@ -973,14 +1011,64 @@ HB_FUNC( POINT )
 
 // void  polar  (float xe, float xorg, float xstp, float yorg, float ystp);
 // int   polclp (const float *xray, const float *yray, int n, float *xout, float *yout, int nmax, float xv, const char *cedge);
+
 // void  polcrv (const char *cpol);
+HB_FUNC( POLCRV )
+{
+   if( hb_param( 1, HB_IT_STRING ) != NULL )
+   {
+      polcrv( hb_parc( 1 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // void  polmod (const char *cpos, const char *cdir);
 // void  pos2pt (float x, float y, float *xp, float *yp);
 // void  pos3pt (float x, float y, float z, float *xp, float *yp, float *zp);
+
 // void  posbar (const char *copt);
+HB_FUNC( POSBAR )
+{
+   if( hb_param( 1, HB_IT_STRING ) != NULL )
+   {
+      posbar( hb_parc( 1 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // int   posifl (int nu, int nbyte);
+
 // void  proj3d (const char *copt);
+HB_FUNC( PROJ3D )
+{
+   if( hb_param( 1, HB_IT_STRING ) != NULL )
+   {
+      proj3d( hb_parc( 1 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // void  projct (const char *cproj);
+HB_FUNC( PROJCT )
+{
+   if( hb_param( 1, HB_IT_STRING ) != NULL )
+   {
+      projct( hb_parc( 1 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
 
 // void  psfont (const char *cfont);
 HB_FUNC( PSFONT )
@@ -995,8 +1083,19 @@ HB_FUNC( PSFONT )
    }
 }
 
-
 // void  psmode (const char *cmod);
+HB_FUNC( PSMODE )
+{
+   if( hb_param( 1, HB_IT_STRING ) != NULL )
+   {
+      psmode( hb_parc( 1 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // void  pt2pos (float x, float y, float *xp, float *yp);
 // void  pyra3d (float xm, float ym, float zm, float xl, float h1, float h2, int n);
 // void  qplbar (const float *yray, int n);
@@ -1010,7 +1109,20 @@ HB_FUNC( PSFONT )
 // void  qplsur (const float *zmat, int n, int m);
 // void  quad3d (float xm, float ym, float zm, float xl, float yl, float zl);
 // int   rbfpng (char *cbuf, int nmax);
+
 // void  rbmp   (const char *cfil);
+HB_FUNC( RBMP )
+{
+   if( hb_param( 1, HB_IT_STRING ) != NULL )
+   {
+      rbmp( hb_parc( 1 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // int   readfl (int nu, unsigned char *cbuf, int nbyte);
 // void  reawgt (void);
 // void  recfll (int nx, int ny, int nw, int nh, int ncol);
@@ -1033,12 +1145,51 @@ HB_FUNC( RECTAN )
 
 // void  rel3pt (float x, float y, float z, float *xp, float *yp);
 // void  resatt (void);
+
 // void  reset  (const char *cname);
+HB_FUNC( RESET )
+{
+   if( hb_param( 1, HB_IT_STRING ) != NULL )
+   {
+      reset( hb_parc( 1 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // void  revscr (void);
 // void  rgbhsv (float xr, float xg, float xb, float *xh, float *xs, float *xv);
+
 // void  rgif   (const char *cfil);
+HB_FUNC( RGIF )
+{
+   if( hb_param( 1, HB_IT_STRING ) != NULL )
+   {
+      rgif( hb_parc( 1 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // void  rgtlab (void);
+
 // void  rimage (const char *cfil);
+HB_FUNC( RIMAGE )
+{
+   if( hb_param( 1, HB_IT_STRING ) != NULL )
+   {
+      rimage( hb_parc( 1 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // void  rlarc  (float xm, float ym, float xa, float xb, float a,  float b,  float t);
 // void  rlarea (const float *xray, const float *yray, int n);
 // void  rlcirc (float xm, float ym, float r);
@@ -1060,14 +1211,78 @@ HB_FUNC( RECTAN )
 // void  rot3d  (float xa, float ya, float za);
 // void  rpixel (int ix, int iy, int *iclr);
 // void  rpixls (unsigned char *iray, int ix, int iy, int nw, int nh);
+
 // void  rpng   (const char *cfil);
+HB_FUNC( RPNG )
+{
+   if( hb_param( 1, HB_IT_STRING ) != NULL )
+   {
+      rpng( hb_parc( 1 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // void  rppm   (const char *cfil);
+HB_FUNC( RPPM )
+{
+   if( hb_param( 1, HB_IT_STRING ) != NULL )
+   {
+      rppm( hb_parc( 1 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // void  rpxrow (unsigned char *iray, int ix, int iy, int n);
+
 // void  rtiff  (const char *cfil);
+HB_FUNC( RTIFF )
+{
+   if( hb_param( 1, HB_IT_STRING ) != NULL )
+   {
+      rtiff( hb_parc( 1 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // void  rvynam (void);
+
 // void  scale  (const char *cscl, const char *cax);
+HB_FUNC( SCALE )
+{
+   if( hb_param( 1, HB_IT_STRING ) != NULL &&
+       hb_param( 2, HB_IT_STRING ) != NULL)
+   {
+      scale( hb_parc( 1 ), hb_parc( 2 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // void  sclfac (float xfac);
+
 // void  sclmod (const char *cmode);
+HB_FUNC( SCLMOD )
+{
+   if( hb_param( 1, HB_IT_STRING ) != NULL )
+   {
+      sclmod( hb_parc( 1 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
 
 // void  scrmod (const char *cmode);
 HB_FUNC( SCRMOD )
@@ -1091,7 +1306,20 @@ HB_FUNC( SCRMOD )
 // void  setbas (float xfac);
 // void  setcbk (void (*callbck) (float *x, float *y), const char *copt);
 // void  setclr (int ncol);
+
 // void  setcsr (const char *copt);
+HB_FUNC( SETCSR )
+{
+   if( hb_param( 1, HB_IT_STRING ) != NULL )
+   {
+      setcsr( hb_parc( 1 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // void  setexp (float fexp);
 
 // void  setfce (const char *copt);
@@ -1108,6 +1336,18 @@ HB_FUNC( SETFCE )
 }
 
 // void  setfil (const char *cfil);
+HB_FUNC( SETFIL )
+{
+   if( hb_param( 1, HB_IT_STRING ) != NULL )
+   {
+      setfil( hb_parc( 1 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // void  setgrf (const char *c1, const char *c2, const char *c3, const char *c4);
 // void  setind (int index, float xr, float xg, float xb);
 // void  setmix (const char *cstr, const char *cmix);
@@ -1166,7 +1406,19 @@ HB_FUNC( SETVLT )
 // void  shdcrv (const float *x1ray, const float *y1ray, int n1, const float *x2ray, const float *y2ray, int n2);
 // void  shdeur (const int *inray, const long *ipray, const int *icray, int n);
 // void  shdfac (float xfac);
+
 // void  shdmap (const char *cmap);
+HB_FUNC( SHDMAP )
+{
+   if( hb_param( 1, HB_IT_STRING ) != NULL )
+   {
+      shdmap( hb_parc( 1 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
 
 // void  shdmod (const char *copt, const char *ctyp);
 HB_FUNC( SHDMOD )
@@ -1273,6 +1525,18 @@ HB_FUNC( SURMSH )
 }
 
 // void  suropt (const char *copt);
+HB_FUNC( SUROPT )
+{
+   if( hb_param( 1, HB_IT_STRING ) != NULL )
+   {
+      suropt( hb_parc( 1 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // void  surshc (const float *xray, int n, const float *yray, int m, const float *zmat, const float *wmat);
 // void  surshd (const float *xray, int n, const float *yray, int m, const float *zmat);
 // void  sursze (float xmin, float xmax, float ymin, float ymax);
@@ -1321,7 +1585,20 @@ HB_FUNC( SWGDRW )
 // void  swgflt (int ip, float xv, int ndig);
 // void  swgfnt (const char *cfnt, int n);
 // void  swgfoc (int id);
+
 // void  swghlp (const char *cstr);
+HB_FUNC( SWGHLP )
+{
+   if( hb_param( 1, HB_IT_STRING ) != NULL )
+   {
+      swghlp( hb_parc( 1 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // void  swgint (int ip, int iv);
 // void  swgiop (int n, const char *copt);
 // void  swgjus (const char *ctyp, const char *cwidg);
@@ -1345,6 +1622,18 @@ HB_FUNC( SWGOPT )
 }
 
 // void  swgpop (const char *copt);
+HB_FUNC( SWGPOP )
+{
+   if( hb_param( 1, HB_IT_STRING ) != NULL )
+   {
+      swgpop( hb_parc( 1 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // void  swgpos (int nx, int ny);
 // void  swgray (const float *xray, int nray, const char *copt);
 // void  swgscl (int ip, float xval);
@@ -1449,7 +1738,19 @@ HB_FUNC( TICKS )
 // void  tiforg (int nx, int ny);
 // void  tifwin (int nx, int ny, int nw, int nh);
 // void  timopt (void);
+
 // void  titjus (const char *copt);
+HB_FUNC( TITJUS )
+{
+   if( hb_param( 1, HB_IT_STRING ) != NULL )
+   {
+      titjus( hb_parc( 1 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
 
 // void  title  (void);
 HB_FUNC( TITLE )
@@ -1472,6 +1773,18 @@ HB_FUNC( TITLIN )
 }
 
 // void  titpos (const char *copt);
+HB_FUNC( TITPOS )
+{
+   if( hb_param( 1, HB_IT_STRING ) != NULL )
+   {
+      titpos( hb_parc( 1 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // void  torus3d (float xm, float ym, float zm, float r1, float r2, float h, float a1, float a2, int n, int m);
 // void  tprfin (void);
 // void  tprini (void);
@@ -1498,8 +1811,33 @@ HB_FUNC( TITLIN )
 // void  trifll (const float *xray, const float *yray);
 // void  triplx (void);
 // void  tripts (const float *xray, const float *yray, const float *zray, int n, const int *i1ray, const int *i2ray, const int *i3ray, int ntri, float zlev, float *xpts, float *ypts, int maxpts, int *nptray, int maxray, int *nlins);
+
 // int   trmlen (const char *cstr);
+HB_FUNC( TRMLEN )
+{
+   if( hb_param( 1, HB_IT_STRING ) != NULL )
+   {
+      trmlen( hb_parc( 1 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // void  ttfont (const char *cfnt);
+HB_FUNC( TTFONT )
+{
+   if( hb_param( 1, HB_IT_STRING ) != NULL )
+   {
+      ttfont( hb_parc( 1 ) );
+   }
+   else
+   {
+      hb_errRT_BASE_SubstR( EG_ARG, 3012, NULL, HB_ERR_FUNCNAME, HB_ERR_ARGS_BASEPARAMS );
+   }
+}
+
 // void  tube3d (float x1, float y1, float z1, float x2, float y2, float z2, float r, int nsk1, int nsk2);
 // void  txtbgd (int n);
 // void  txtjus (const char *copt);
