@@ -1,4 +1,3 @@
-@@ -1,58 +0,0 @@
 /*
  *  Demonstration of CURVE
  */
@@ -8,13 +7,13 @@
 PROCEDURE Main()
 
    LOCAL n := 100, i, ic
-   LOCAL fpi := 3.1415926 / 180.0, STEP, x
+   LOCAL fpi := 3.1415926 / 180.0, nStep, x
    LOCAL xray[ 100 ], y1ray[ 100 ], y2ray[ 100 ]
 
-   STEP := 360.0 / ( n - 1 )
+   nStep := 360.0 / ( n - 1 )
 
    FOR i := 1 TO n
-      xray[ i ] := i * STEP
+      xray[ i ] := i * nStep
       x := xray[ i ] * fpi
       y1ray[ i ] := sin( x )
       y2ray[ i ] := cos( x )
@@ -36,7 +35,7 @@ PROCEDURE Main()
    ticks( 10, "y" )
 
    titlin( "Demonstration of CURVE", 1 )
-   titlin( "SIN(X), COS(X)", 3 )
+   titlin( "SIN( X ), COS( X )", 3 )
 
    ic := intrgb( 0.95, 0.95, 0.95 )
    axsbgd( ic )
